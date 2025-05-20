@@ -1,12 +1,39 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useEffect } from 'react';
+import HeroSection from '../components/HeroSection';
+import ForWhoSection from '../components/ForWhoSection';
+import ProgramSection from '../components/ProgramSection';
+import ResultsSection from '../components/ResultsSection';
+import BonusesSection from '../components/BonusesSection';
+import LastChanceSection from '../components/LastChanceSection';
+import FaqSection from '../components/FaqSection';
+import ConsultationSection from '../components/ConsultationSection';
+import Footer from '../components/Footer';
+import FloatingBanner from '../components/FloatingBanner';
+import StickyHeader from '../components/StickyHeader';
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "Деньги в дате рождения - Онлайн-интенсив по цифровой психологии";
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <StickyHeader />
+      
+      <main>
+        <HeroSection />
+        <ForWhoSection />
+        <ProgramSection />
+        <ResultsSection />
+        <BonusesSection />
+        <LastChanceSection />
+        <FaqSection />
+        <ConsultationSection />
+      </main>
+      
+      <Footer />
+      <FloatingBanner />
     </div>
   );
 };
