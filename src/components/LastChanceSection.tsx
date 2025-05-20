@@ -12,7 +12,7 @@ const LastChanceSection: React.FC = () => {
   });
 
   return (
-    <section className="py-16 bg-gradient-to-b from-theme-purple to-theme-dark-purple text-white">
+    <section className="py-16 bg-gradient-to-b from-theme-blue to-theme-dark-blue text-white">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center text-white mb-2">
           Бесплатный доступ закроется через:

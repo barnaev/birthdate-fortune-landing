@@ -17,8 +17,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 270 65% 60%;
-    --primary-foreground: 270 10% 98%;
+    --primary: 210 100% 50%;
+    --primary-foreground: 210 10% 98%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,7 +26,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 270 81% 94%;
+    --accent: 210 90% 95%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,7 +34,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 270 65% 60%;
+    --ring: 210 100% 50%;
 
     --radius: 0.5rem;
 
@@ -70,7 +70,7 @@
 
 @layer components {
   .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-theme-light-purple text-theme-purple;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-theme-light-blue text-theme-blue;
   }
 
   .section-title {
@@ -79,12 +79,12 @@
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl font-semibold mb-4 text-theme-purple;
+    @apply text-xl md:text-2xl font-semibold mb-4 text-theme-blue;
     font-family: 'Montserrat', sans-serif;
   }
 
   .highlight {
-    @apply text-theme-purple font-semibold;
+    @apply text-theme-blue font-semibold;
   }
 
   .benefit-card {
@@ -96,11 +96,11 @@
   }
 
   .icon-container {
-    @apply w-14 h-14 flex items-center justify-center rounded-full bg-theme-light-purple text-theme-purple mb-4;
+    @apply w-14 h-14 flex items-center justify-center rounded-full bg-theme-light-blue text-theme-blue mb-4;
   }
 
   .cta-button {
-    @apply px-8 py-4 bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white rounded-full font-bold text-lg shadow-lg hover:bg-theme-dark-purple transition-all duration-300 hover:scale-105;
+    @apply px-8 py-4 bg-gradient-to-r from-theme-blue to-theme-cyan text-white rounded-full font-bold text-lg shadow-lg hover:bg-theme-dark-blue transition-all duration-300 hover:scale-105;
     font-family: 'Montserrat', sans-serif;
   }
 
@@ -123,12 +123,12 @@
 
   .timeline-item::before {
     content: '';
-    @apply absolute left-0 top-0 h-full w-0.5 bg-theme-purple;
+    @apply absolute left-0 top-0 h-full w-0.5 bg-theme-blue;
   }
 
   .timeline-item::after {
     content: '';
-    @apply absolute left-0 top-0 h-6 w-6 rounded-full bg-theme-purple -translate-x-2.5;
+    @apply absolute left-0 top-0 h-6 w-6 rounded-full bg-theme-blue -translate-x-2.5;
   }
 
   .timeline-item:last-child::before {
@@ -140,7 +140,7 @@
   }
 
   .form-input {
-    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-purple focus:border-theme-purple;
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-theme-blue focus:border-theme-blue;
   }
   
   /* New premium styling elements */
@@ -149,11 +149,11 @@
   }
   
   .premium-gradient {
-    @apply bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white;
+    @apply bg-gradient-to-r from-theme-blue to-theme-cyan text-white;
   }
   
   .premium-shadow {
-    box-shadow: 0 10px 30px -5px rgba(155, 83, 223, 0.2);
+    box-shadow: 0 10px 30px -5px rgba(16, 137, 255, 0.2);
   }
   
   .hover-lift {
@@ -162,11 +162,11 @@
   
   .hover-lift:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px -5px rgba(155, 83, 223, 0.25);
+    box-shadow: 0 15px 30px -5px rgba(16, 137, 255, 0.25);
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-theme-purple to-theme-dark-purple bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-theme-blue to-theme-cyan bg-clip-text text-transparent;
   }
 }
 

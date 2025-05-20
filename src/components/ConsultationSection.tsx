@@ -40,7 +40,7 @@ const ConsultationSection: React.FC = () => {
   };
 
   return (
-    <section className="py-16 bg-theme-light-purple/70">
+    <section className="py-16 bg-theme-light-blue/70">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
           <h2 className="section-title text-center mb-8">
@@ -111,7 +111,7 @@ const ConsultationSection: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                className="w-full bg-gradient-to-r from-theme-blue to-theme-cyan text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
               >
                 {isSubmitting ? (
                   <>

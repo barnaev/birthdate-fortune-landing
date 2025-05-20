@@ -64,12 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				theme: {
-					purple: "#9b53df",
-					"light-purple": "#e5deff",
-					"dark-purple": "#5933ac",
-					blue: "#1EAEDB",
-					red: "#ea384c",
-					green: "#20c997",
+					blue: "#1089FF",
+					"light-blue": "#e6f3ff",
+					"dark-blue": "#0862B0",
+					"cyan": "#0CCEEB",
+					"light-cyan": "#e5f9fd",
+					red: "#FF5A5A",
+					green: "#20C997",
 					black: "#1A1F2C",
 					gray: "#8E9196",
 					"light-gray": "#f8f9fa"

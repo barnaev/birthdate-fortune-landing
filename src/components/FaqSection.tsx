@@ -95,9 +95,9 @@ const FaqSection: React.FC = () => {
         <div className="mt-10 text-center">
           <p className="mb-4">Остались сомнения? Свяжитесь с нами:</p>
           <div className="flex justify-center gap-4">
-            <a href="#" className="text-theme-purple hover:underline">Telegram</a>
+            <a href="#" className="text-theme-blue hover:underline">Telegram</a>
             <span>|</span>
-            <a href="#" className="text-theme-purple hover:underline">Позвонить</a>
+            <a href="#" className="text-theme-blue hover:underline">Позвонить</a>
           </div>
           
           <div className="mt-8">

@@ -36,8 +36,8 @@ const FloatingBanner: React.FC = () => {
         <div className="flex-1 mb-3 md:mb-0">
           <div className="flex items-center">
             <div className="mr-4 hidden md:block">
-              <div className="h-12 w-12 rounded-full bg-theme-light-purple flex items-center justify-center">
-                <span className="text-theme-purple text-xl font-bold">⏰</span>
+              <div className="h-12 w-12 rounded-full bg-theme-light-blue flex items-center justify-center">
+                <span className="text-theme-blue text-xl font-bold">⏰</span>
               </div>
             </div>
             <div>
@@ -50,7 +50,7 @@ const FloatingBanner: React.FC = () => {
         <div className="flex-1 text-center md:text-right">
           <a 
             href="#register" 
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white font-bold py-3 px-6 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-theme-blue to-theme-cyan text-white font-bold py-3 px-6 rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105"
           >
             Забронировать место
             <ArrowRight size={18} />

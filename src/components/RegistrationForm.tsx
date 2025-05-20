@@ -71,15 +71,15 @@ const RegistrationForm: React.FC = () => {
   const renderStepIndicator = () => (
     <div className="mb-6 flex justify-center">
       <div className="flex items-center">
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 0 ? 'bg-theme-purple text-white' : 'bg-theme-light-purple text-theme-purple'}`}>
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 0 ? 'bg-theme-blue text-white' : 'bg-theme-light-blue text-theme-blue'}`}>
           <User size={18} />
         </div>
-        <div className={`w-12 h-1 ${formStep >= 1 ? 'bg-theme-purple' : 'bg-gray-300'}`}></div>
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 1 ? 'bg-theme-purple text-white' : 'bg-theme-light-purple text-theme-purple'}`}>
+        <div className={`w-12 h-1 ${formStep >= 1 ? 'bg-theme-blue' : 'bg-gray-300'}`}></div>
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 1 ? 'bg-theme-blue text-white' : 'bg-theme-light-blue text-theme-blue'}`}>
           <Mail size={18} />
         </div>
-        <div className={`w-12 h-1 ${formStep >= 2 ? 'bg-theme-purple' : 'bg-gray-300'}`}></div>
-        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 2 ? 'bg-theme-purple text-white' : 'bg-theme-light-purple text-theme-purple'}`}>
+        <div className={`w-12 h-1 ${formStep >= 2 ? 'bg-theme-blue' : 'bg-gray-300'}`}></div>
+        <div className={`w-10 h-10 rounded-full flex items-center justify-center ${formStep === 2 ? 'bg-theme-blue text-white' : 'bg-theme-light-blue text-theme-blue'}`}>
           <Phone size={18} />
         </div>
       </div>
@@ -93,7 +93,7 @@ const RegistrationForm: React.FC = () => {
       </div>
       
       <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
-        <div className="bg-gradient-to-r from-theme-purple to-theme-dark-purple p-6">
+        <div className="bg-gradient-to-r from-theme-blue to-theme-cyan p-6">
           <h3 className="text-2xl md:text-3xl font-bold text-white">
             Записаться на бесплатный онлайн-интенсив
           </h3>
@@ -122,7 +122,7 @@ const RegistrationForm: React.FC = () => {
                       placeholder="Введите ваше имя"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      className="pl-10 py-6 bg-gray-50 border-theme-light-purple focus:border-theme-purple"
+                      className="pl-10 py-6 bg-gray-50 border-theme-light-blue focus:border-theme-blue"
                       autoFocus
                     />
                   </div>
@@ -133,7 +133,7 @@ const RegistrationForm: React.FC = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                  className="w-full bg-gradient-to-r from-theme-blue to-theme-cyan text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
                 >
                   Продолжить
                   <ArrowRight size={18} />
@@ -157,7 +157,7 @@ const RegistrationForm: React.FC = () => {
                       placeholder="Введите ваш email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="pl-10 py-6 bg-gray-50 border-theme-light-purple focus:border-theme-purple"
+                      className="pl-10 py-6 bg-gray-50 border-theme-light-blue focus:border-theme-blue"
                       autoFocus
                     />
                   </div>
@@ -168,7 +168,7 @@ const RegistrationForm: React.FC = () => {
                 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                  className="w-full bg-gradient-to-r from-theme-blue to-theme-cyan text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
                 >
                   Продолжить
                   <ArrowRight size={18} />
@@ -178,7 +178,7 @@ const RegistrationForm: React.FC = () => {
                   <button 
                     type="button" 
                     onClick={() => setFormStep(0)}
-                    className="text-theme-purple underline text-sm hover:text-theme-dark-purple"
+                    className="text-theme-blue underline text-sm hover:text-theme-dark-blue"
                   >
                     Вернуться назад
                   </button>
@@ -202,7 +202,7 @@ const RegistrationForm: React.FC = () => {
                       placeholder="+7 (900) 000-0000"
                       value={phone}
                       onChange={handlePhoneChange}
-                      className="pl-10 py-6 bg-gray-50 border-theme-light-purple focus:border-theme-purple"
+                      className="pl-10 py-6 bg-gray-50 border-theme-light-blue focus:border-theme-blue"
                       autoFocus
                     />
                   </div>
@@ -214,7 +214,7 @@ const RegistrationForm: React.FC = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-theme-purple to-theme-dark-purple text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
+                  className="w-full bg-gradient-to-r from-theme-blue to-theme-cyan text-white py-4 px-6 rounded-lg font-medium flex items-center justify-center gap-2 hover:shadow-lg transition-all duration-300 hover:scale-[1.02]"
                 >
                   {isSubmitting ? (
                     <>
@@ -233,7 +233,7 @@ const RegistrationForm: React.FC = () => {
                   <button 
                     type="button" 
                     onClick={() => setFormStep(1)}
-                    className="text-theme-purple underline text-sm hover:text-theme-dark-purple"
+                    className="text-theme-blue underline text-sm hover:text-theme-dark-blue"
                   >
                     Вернуться назад
                   </button>
