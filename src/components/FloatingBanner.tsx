@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import Timer from './Timer';
 
 const FloatingBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);

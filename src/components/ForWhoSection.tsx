@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Rocket, Computer, ChartLineUp } from 'lucide-react';
+import { Rocket, Computer, ChartLine } from 'lucide-react';
 
 const ForWhoSection: React.FC = () => {
   return (
@@ -112,7 +112,7 @@ const ForWhoSection: React.FC = () => {
           {/* Card 3 */}
           <div className="benefit-card animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <div className="icon-container">
-              <ChartLineUp size={30} />
+              <ChartLine size={30} />
             </div>
             <h3 className="text-xl font-bold mb-3 text-theme-black">
               Для экспертов (психологи, коучи, HR)
