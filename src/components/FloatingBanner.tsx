@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Timer from './Timer';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 
 const FloatingBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +62,7 @@ const FloatingBanner: React.FC = () => {
           className="absolute top-1 right-2 text-gray-400 hover:text-gray-600" 
           aria-label="Закрыть"
         >
-          ×
+          <X size={18} />
         </button>
       </div>
     </div>

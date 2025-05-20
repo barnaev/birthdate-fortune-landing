@@ -47,7 +47,7 @@ const ResultsSection: React.FC = () => {
     }
   ];
 
-  const [activeIndex, setActiveIndex] = React.useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [hoursPerWeek, setHoursPerWeek] = useState(5);
   const [consultationFee, setConsultationFee] = useState(5000);
   
@@ -59,6 +59,7 @@ const ResultsSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  // Fixed calculator function
   const calculateIncome = () => {
     return hoursPerWeek * consultationFee * 4; // Monthly income
   };

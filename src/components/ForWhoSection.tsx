@@ -6,93 +6,74 @@ const ForWhoSection: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-white to-theme-light-purple/30">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mb-16">
+        <h2 className="section-title text-center mb-12">
           Этот интенсив создан <span className="text-theme-purple">для вас</span>
         </h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}
-          <div className="transform transition-all duration-500 hover:-translate-y-2">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full">
-              <div className="bg-gradient-to-r from-theme-purple to-theme-dark-purple p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg absolute -bottom-8 left-6">
-                  <Rocket size={32} className="text-theme-purple" />
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <div className="h-3 bg-gradient-to-r from-theme-purple to-theme-dark-purple"></div>
+            <div className="p-6 relative">
+              <div className="w-16 h-16 rounded-full bg-theme-light-purple flex items-center justify-center mb-6 mx-auto">
+                <Rocket size={32} className="text-theme-purple" />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3 text-center">
+                Для тех, кто хочет изменить жизнь
+              </h3>
+              
+              <div className="bg-theme-light-purple rounded-xl p-4 mb-6">
+                <p className="text-theme-purple font-medium text-center">
+                  Устали от пробуксовки? Получите инструменты для прорыва!
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Хотите выйти из замкнутого круга</h4>
+                    <p className="text-sm text-theme-gray">
+                      «Все как раньше» не работает, пора найти новый путь
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Мечтаете о быстрых переменах</h4>
+                    <p className="text-sm text-theme-gray">
+                      Перезагрузите мышление за 3 дня и начните действовать
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Стремитесь к конкретным целям</h4>
+                    <p className="text-sm text-theme-gray">
+                      Увеличьте доход в 2-3 раза через анализ даты рождения
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              <div className="p-6 pt-12">
-                <h3 className="text-xl font-bold mb-3 text-theme-black">
-                  Для тех, кто хочет изменить свою жизнь
-                </h3>
-                
-                <div className="bg-theme-purple/10 rounded-xl p-4 mb-6">
-                  <p className="text-theme-purple font-medium">
-                    Устали от пробуксовки? Получите инструменты для прорыва!
-                  </p>
-                </div>
-                
-                <div className="space-y-6 mb-6">
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Хотите выйти из замкнутого круга
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Понимаете, что «все как раньше» не работает</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Устали от повторяющихся кризисов</span>
-                      </li>
-                    </ul>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-theme-light-purple flex items-center justify-center mr-3">
+                    <span className="text-theme-purple font-bold">М</span>
                   </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Мечтаете о быстрых переменах
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Нуждаетесь в четкой инструкции</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Готовы за 3 дня перезагрузить мышление</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Стремитесь к конкретным целям
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Увеличить доход в 2-3 раза</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Найти гармонию в отношениях за 21 день</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-theme-light-purple rounded-xl p-4 shadow-inner">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full bg-theme-purple/20 flex items-center justify-center">
-                      <span className="text-theme-purple font-bold">М</span>
-                    </div>
-                    <p className="font-semibold">Пример Марии:</p>
-                  </div>
-                  <p className="text-sm italic">
-                    после интенсива она сменила профессию в 45 лет и вышла на доход 115 000₽/мес, работая 3 часа в день из дома.
+                  <p className="text-sm">
+                    <span className="font-semibold">Мария, 35 лет:</span> после интенсива вышла на доход 115 000₽/мес
                   </p>
                 </div>
               </div>
@@ -100,176 +81,136 @@ const ForWhoSection: React.FC = () => {
           </div>
           
           {/* Card 2 */}
-          <div className="transform transition-all duration-500 hover:-translate-y-2">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full">
-              <div className="bg-gradient-to-r from-theme-purple to-theme-dark-purple p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg absolute -bottom-8 left-6">
-                  <Computer size={32} className="text-theme-purple" />
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <div className="h-3 bg-gradient-to-r from-theme-purple to-theme-dark-purple"></div>
+            <div className="p-6 relative">
+              <div className="w-16 h-16 rounded-full bg-theme-light-purple flex items-center justify-center mb-6 mx-auto">
+                <Computer size={32} className="text-theme-purple" />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3 text-center">
+                Для будущих цифровых психологов
+              </h3>
+              
+              <div className="bg-theme-light-purple rounded-xl p-4 mb-6">
+                <p className="text-theme-purple font-medium text-center">
+                  Зарабатывайте на новом навыке уже во время интенсива!
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Профессия без вложений</h4>
+                    <p className="text-sm text-theme-gray">
+                      Освоите востребованный навык за 3 дня
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Идеально подходит для</h4>
+                    <p className="text-sm text-theme-gray">
+                      Мам в декрете, офисных работников и пенсионеров
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Даже для сомневающихся</h4>
+                    <p className="text-sm text-theme-gray">
+                      Первую консультацию проведёте с поддержкой наставника
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              <div className="p-6 pt-12">
-                <h3 className="text-xl font-bold mb-3 text-theme-black">
-                  Для будущих цифровых психологов
-                </h3>
-                
-                <div className="bg-theme-purple/10 rounded-xl p-4 mb-6">
-                  <p className="text-theme-purple font-medium">
-                    Зарабатывайте на новом навыке уже во время интенсива!
-                  </p>
-                </div>
-                
-                <div className="space-y-6 mb-6">
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Профессия без вложений
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Освойте востребованный навык за 3 дня</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Зарабатывайте от 2 000₽ за консультацию</span>
-                      </li>
-                    </ul>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center justify-center">
+                  <div className="bg-theme-light-purple rounded-lg px-4 py-2">
+                    <p className="text-sm">
+                      <span className="font-bold text-theme-purple">91%</span> участников получили клиентов еще во время интенсива
+                    </p>
                   </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Идеально подходит для
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Мам в декрете: +15 000₽ к бюджету</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Офисных работников: пассивный доход</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Пенсионеров: монетизация опыта</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Для тех, кто сомневается
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Проведите первую консультацию с поддержкой</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Получите доступ к базе клиентов</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-theme-light-purple rounded-xl p-4 shadow-inner">
-                  <div className="flex items-center gap-2 mb-2">
-                    <p className="text-2xl font-bold text-theme-purple">91%</p>
-                  </div>
-                  <p className="text-sm">
-                    участников прошлого потока получили первых клиентов <span className="font-bold">ДО</span> окончания 3-дневного интенсива.
-                  </p>
                 </div>
               </div>
             </div>
           </div>
           
           {/* Card 3 */}
-          <div className="transform transition-all duration-500 hover:-translate-y-2">
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden h-full">
-              <div className="bg-gradient-to-r from-theme-purple to-theme-dark-purple p-6 relative">
-                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center shadow-lg absolute -bottom-8 left-6">
-                  <ChartLine size={32} className="text-theme-purple" />
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+            <div className="h-3 bg-gradient-to-r from-theme-purple to-theme-dark-purple"></div>
+            <div className="p-6 relative">
+              <div className="w-16 h-16 rounded-full bg-theme-light-purple flex items-center justify-center mb-6 mx-auto">
+                <ChartLine size={32} className="text-theme-purple" />
+              </div>
+              
+              <h3 className="text-xl font-bold mb-3 text-center">
+                Для экспертов и специалистов
+              </h3>
+              
+              <div className="bg-theme-light-purple rounded-xl p-4 mb-6">
+                <p className="text-theme-purple font-medium text-center">
+                  Усилите свою экспертизу и увеличьте доход!
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Выделиться на рынке</h4>
+                    <p className="text-sm text-theme-gray">
+                      +30% к стоимости консультаций благодаря цифровой психологии
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Работа с командами</h4>
+                    <p className="text-sm text-theme-gray">
+                      Решайте конфликты через совместимость по датам рождения
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="min-w-6 h-6 rounded-full bg-theme-purple flex items-center justify-center mt-1 mr-3">
+                    <span className="text-white text-xs font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-sm mb-1">Масштабирование</h4>
+                    <p className="text-sm text-theme-gray">
+                      Создайте онлайн-курс со средним чеком 25 000₽
+                    </p>
+                  </div>
                 </div>
               </div>
               
-              <div className="p-6 pt-12">
-                <h3 className="text-xl font-bold mb-3 text-theme-black">
-                  Для экспертов (психологи, коучи, HR)
-                </h3>
-                
-                <div className="bg-theme-purple/10 rounded-xl p-4 mb-6">
-                  <p className="text-theme-purple font-medium">
-                    Усилите свою экспертизу и увеличьте чек!
-                  </p>
-                </div>
-                
-                <div className="space-y-6 mb-6">
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Выделиться на рынке
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>+30% к стоимости консультаций</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Сократите диагностику с 2 часов до 15 минут</span>
-                      </li>
-                    </ul>
+              <div className="mt-6 pt-6 border-t border-gray-100">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 rounded-full bg-theme-light-purple flex items-center justify-center mr-3">
+                    <span className="text-theme-purple font-bold">А</span>
                   </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Работа с командами
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Решите конфликты через совместимость по датам</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Определите мотивацию по сильным сторонам</span>
-                      </li>
-                    </ul>
-                  </div>
-                  
-                  <div className="rounded-xl bg-white shadow-md p-5 border-l-4 border-theme-purple">
-                    <h4 className="font-bold mb-2 text-theme-black flex items-center">
-                      <span className="inline-block w-2 h-2 bg-theme-purple rounded-full mr-2"></span>
-                      Масштабирование
-                    </h4>
-                    <ul className="space-y-2 text-sm">
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Создайте онлайн-курс, средний чек 25 000₽</span>
-                      </li>
-                      <li className="flex">
-                        <span className="text-theme-purple mr-2">—</span>
-                        <span>Партнерская программа с 20% роялти</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div className="bg-theme-light-purple rounded-xl p-4 shadow-inner">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-full bg-theme-purple/20 flex items-center justify-center">
-                      <span className="text-theme-purple font-bold">А</span>
-                    </div>
-                    <p className="font-semibold">Анна, HR-менеджер:</p>
-                  </div>
-                  <p className="text-sm italic">
-                    внедрила анализ дат в подбор персонала — сократила текучку на 40% за полгода.
+                  <p className="text-sm">
+                    <span className="font-semibold">HR Анна:</span> сократила текучку на 40% за полгода
                   </p>
                 </div>
               </div>

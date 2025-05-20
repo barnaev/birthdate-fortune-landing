@@ -11,25 +11,29 @@ const HeroSection: React.FC = () => {
   });
 
   return (
-    <section className="relative bg-gradient-to-br from-white to-theme-light-purple py-12 md:py-20 overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="relative bg-gradient-to-br from-white to-theme-light-purple/50 pt-24 pb-12 md:pt-32 md:pb-20 overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-theme-light-purple/30 filter blur-3xl"></div>
+      <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-theme-light-purple/20 filter blur-3xl"></div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row gap-8 items-center">
           <div className="w-full md:w-7/12">
-            <div className="badge mb-4">
+            <div className="badge mb-4 shadow-sm">
               <span className="mr-2">Онлайн-интенсив</span> | 
               <span className="mx-2">Старт: {formattedDate}</span> | 
               <span className="ml-2">Длительность: 3 дня</span>
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-theme-black">
-              Деньги в дате рождения
+              <span className="text-gradient">Деньги</span> в дате рождения
             </h1>
             
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-theme-purple">
               Стань цифровым психологом за 3 дня и измени жизнь через авторскую методику Савелия
             </h2>
             
-            <div className="bg-white p-6 rounded-xl shadow-md mb-8">
+            <div className="glass-card p-6 mb-8">
               <p className="text-lg mb-4">
                 Готовая инструкция по вашей дате рождения для прорыва в:
               </p>
@@ -61,16 +65,16 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="w-full md:w-5/12">
-            <div className="relative">
-              <div className="absolute -z-10 w-64 h-64 bg-theme-light-purple rounded-full blur-3xl opacity-70 -top-10 -right-10"></div>
+            <div className="relative animate-float">
+              <div className="absolute -z-10 w-64 h-64 bg-theme-light-purple/60 rounded-full blur-3xl opacity-70 -top-10 -right-10"></div>
               <img 
                 src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" 
                 alt="Савелий - эксперт по цифровой психологии"
-                className="w-full h-auto rounded-xl shadow-xl"
+                className="w-full h-auto rounded-xl shadow-xl premium-shadow"
               />
-              <div className="absolute -bottom-4 -left-4 bg-white px-4 py-3 rounded-lg shadow-lg">
-                <p className="font-semibold text-theme-purple">Савелий</p>
-                <p className="text-sm text-theme-gray">Эксперт по цифровой психологии</p>
+              <div className="absolute -bottom-4 -left-4 bg-white px-6 py-4 rounded-lg shadow-lg">
+                <p className="font-semibold text-theme-purple text-lg">Савелий</p>
+                <p className="text-theme-gray">Эксперт по цифровой психологии</p>
               </div>
             </div>
           </div>
