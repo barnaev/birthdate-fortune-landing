@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 
 const ResultsSection: React.FC = () => {
   const testimonials = [
@@ -48,6 +48,8 @@ const ResultsSection: React.FC = () => {
   ];
 
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [hoursPerWeek, setHoursPerWeek] = useState(5);
+  const [consultationFee, setConsultationFee] = useState(5000);
   
   React.useEffect(() => {
     const interval = setInterval(() => {
@@ -57,8 +59,12 @@ const ResultsSection: React.FC = () => {
     return () => clearInterval(interval);
   }, [testimonials.length]);
 
+  const calculateIncome = () => {
+    return hoursPerWeek * consultationFee * 4; // Monthly income
+  };
+
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-b from-white to-theme-light-purple">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center">
           1 292 734₽ — столько заработали наши ученики за 3 дня.<br />
@@ -66,52 +72,97 @@ const ResultsSection: React.FC = () => {
         </h2>
         
         <div className="max-w-4xl mx-auto mb-12">
-          <div className="grid grid-cols-3 gap-6 text-center mb-8">
-            <div className="bg-theme-light-purple p-4 rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center mb-8">
+            <div className="bg-white rounded-xl shadow-lg p-6">
               <p className="text-3xl font-bold text-theme-purple">18 500₽</p>
               <p>средний доход участника за интенсив</p>
             </div>
-            <div className="bg-theme-light-purple p-4 rounded-lg">
+            <div className="bg-white rounded-xl shadow-lg p-6">
               <p className="text-3xl font-bold text-theme-purple">79%</p>
               <p>учеников вышли на доход 150 000₽+ через 3 месяца</p>
             </div>
-            <div className="bg-theme-light-purple p-4 rounded-lg">
+            <div className="bg-white rounded-xl shadow-lg p-6">
               <p className="text-3xl font-bold text-theme-purple">87%</p>
               <p>выполнили денежное задание еще во время обучения</p>
             </div>
           </div>
           
-          <div className="bg-white shadow-lg rounded-xl p-6 mb-10">
-            <h3 className="text-xl font-bold mb-4 text-center">Рассчитайте ваш потенциальный доход</h3>
+          <div className="bg-white shadow-xl rounded-2xl p-8 mb-10 transform hover:scale-[1.01] transition-all duration-300">
+            <h3 className="text-2xl font-bold mb-6 text-center text-theme-black">Рассчитайте ваш потенциальный доход</h3>
             
-            <div className="space-y-4">
+            <div className="space-y-6">
               <div>
-                <p className="font-medium mb-2">Сколько часов в неделю готовы уделять консультациям?</p>
+                <p className="font-medium mb-4">Сколько часов в неделю готовы уделять консультациям?</p>
                 <div className="flex gap-3">
-                  <button className="flex-1 py-2 px-4 border border-theme-purple rounded-lg hover:bg-theme-light-purple transition-colors">3 часа</button>
-                  <button className="flex-1 py-2 px-4 bg-theme-purple text-white rounded-lg">5 часов</button>
-                  <button className="flex-1 py-2 px-4 border border-theme-purple rounded-lg hover:bg-theme-light-purple transition-colors">10 часов</button>
+                  <button 
+                    onClick={() => setHoursPerWeek(3)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${hoursPerWeek === 3 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    3 часа
+                  </button>
+                  <button 
+                    onClick={() => setHoursPerWeek(5)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${hoursPerWeek === 5 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    5 часов
+                  </button>
+                  <button 
+                    onClick={() => setHoursPerWeek(10)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${hoursPerWeek === 10 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    10 часов
+                  </button>
                 </div>
               </div>
               
               <div>
-                <p className="font-medium mb-2">Минимальный чек за консультацию?</p>
+                <p className="font-medium mb-4">Минимальный чек за консультацию?</p>
                 <div className="flex gap-3">
-                  <button className="flex-1 py-2 px-4 border border-theme-purple rounded-lg hover:bg-theme-light-purple transition-colors">2000₽</button>
-                  <button className="flex-1 py-2 px-4 bg-theme-purple text-white rounded-lg">5000₽</button>
-                  <button className="flex-1 py-2 px-4 border border-theme-purple rounded-lg hover:bg-theme-light-purple transition-colors">10 000₽</button>
+                  <button 
+                    onClick={() => setConsultationFee(2000)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${consultationFee === 2000 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    2000₽
+                  </button>
+                  <button 
+                    onClick={() => setConsultationFee(5000)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${consultationFee === 5000 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    5000₽
+                  </button>
+                  <button 
+                    onClick={() => setConsultationFee(10000)} 
+                    className={`flex-1 py-3 px-4 rounded-lg transition-colors ${consultationFee === 10000 
+                      ? 'bg-theme-purple text-white shadow-md' 
+                      : 'border border-theme-purple hover:bg-theme-light-purple'}`}
+                  >
+                    10 000₽
+                  </button>
                 </div>
               </div>
             </div>
             
-            <div className="mt-6 p-4 bg-theme-light-purple rounded-lg text-center">
-              <p className="text-lg">При 5 консультациях в неделю по 5000₽</p>
-              <p className="text-3xl font-bold text-theme-purple">Ваш доход = 100 000₽/мес</p>
+            <div className="mt-8 p-6 bg-gradient-to-r from-theme-light-purple to-theme-purple/20 rounded-xl text-center">
+              <p className="text-lg mb-2">При {hoursPerWeek} консультациях в неделю по {consultationFee.toLocaleString('ru-RU')}₽</p>
+              <p className="text-3xl md:text-4xl font-bold text-theme-purple animate-pulse">
+                Ваш доход = {calculateIncome().toLocaleString('ru-RU')}₽/мес
+              </p>
+              <p className="text-sm mt-2 text-theme-black/70">*Расчет приблизительный и основан на средних показателях наших учеников</p>
             </div>
           </div>
         </div>
         
-        <h3 className="section-subtitle text-center mb-8">Истории наших учеников</h3>
+        <h3 className="section-subtitle text-center mb-10">Истории наших учеников</h3>
         
         <div className="relative">
           <div className="overflow-hidden">
@@ -121,34 +172,34 @@ const ResultsSection: React.FC = () => {
             >
               {testimonials.map((testimonial, idx) => (
                 <div key={idx} className="px-4" style={{ width: `${100 / testimonials.length}%` }}>
-                  <div className="bg-white shadow-lg rounded-xl p-6">
+                  <div className="bg-white shadow-xl rounded-2xl p-8 hover:shadow-2xl transition-all duration-300">
                     <div className="flex flex-col md:flex-row gap-6 items-center mb-6">
                       <div className="md:w-1/3">
                         <img 
                           src={testimonial.image}
                           alt={testimonial.name}
-                          className="w-32 h-32 rounded-full object-cover mx-auto"
+                          className="w-32 h-32 rounded-full object-cover mx-auto shadow-lg border-4 border-theme-light-purple"
                         />
                       </div>
                       <div className="md:w-2/3">
-                        <h4 className="font-bold text-lg">{testimonial.name}</h4>
+                        <h4 className="font-bold text-xl">{testimonial.name}</h4>
                         <p className="text-theme-gray">{testimonial.location}</p>
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="bg-theme-light-purple p-4 rounded-lg">
-                        <p className="font-medium mb-2">До интенсива:</p>
+                      <div className="bg-theme-light-purple p-6 rounded-xl">
+                        <p className="font-medium mb-2 text-theme-purple">До интенсива:</p>
                         <p>{testimonial.before}</p>
                       </div>
-                      <div className="bg-theme-light-purple p-4 rounded-lg">
+                      <div className="bg-gradient-to-r from-theme-purple to-theme-dark-purple p-6 rounded-xl text-white">
                         <p className="font-medium mb-2">После интенсива:</p>
                         <p>{testimonial.after}</p>
                       </div>
                     </div>
                     
                     <div className="mt-6 flex justify-center">
-                      <div className="bg-white border border-theme-green rounded-lg px-4 py-2 text-sm">
+                      <div className="bg-white border-2 border-theme-green rounded-full px-6 py-2">
                         <p className="text-theme-green font-medium">Подтвержденные результаты</p>
                       </div>
                     </div>
@@ -158,12 +209,16 @@ const ResultsSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="flex justify-center mt-6 gap-2">
+          <div className="flex justify-center mt-8 gap-3">
             {testimonials.map((_, idx) => (
               <button 
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
-                className={`w-3 h-3 rounded-full ${idx === activeIndex ? 'bg-theme-purple' : 'bg-gray-300'}`}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  idx === activeIndex 
+                    ? 'bg-theme-purple scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
                 aria-label={`Переключиться к отзыву ${idx + 1}`}
               />
             ))}
